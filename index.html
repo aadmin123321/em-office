@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EM_OFFICE Računovodstvo</title>
+  <link rel="stylesheet" href="style.css">
+  <script defer src="script.js"></script>
+</head>
+<body>
+
+  <header class="nav-header">
+    <div class="nav-wrapper">
+  
+      <a href="#" class="nav-logo">
+        <img src="logo.png" alt="Logo">
+      </a>
+  
+      <button class="nav-toggle" id="navToggle">
+        <span id="openIcon">☰</span>
+        <span id="closeIcon">✖</span>
+      </button>
+  
+      <nav class="nav-menu" id="navMenu">
+        <a href="#hero">Početna</a>
+        <a href="#onama">O nama</a>
+        <a href="#usluge">Usluge</a>
+        <a href="#kalkulator">Kalkulator</a>
+        
+      </nav>
+  
+    </div>
+  </header>
+  
+  
+
+
+<!-- POČETNA -->
+<section id="pocetna" class="hero">
+  <div class="hero-left">
+    <img src="slika1.jpg" alt="Slika 1">
+  </div>
+  <div class="hero-right">
+    <img src="slika2.jpg" alt="Slika 2">
+  </div>
+
+  <!-- CENTRALNI PARAGRAF SA TEKSTOM -->
+  <div class="hero-paragraph">
+    <h2>Računovodstvo</h2>
+    <p>Vaš pouzdan partner u finansijama. Pružamo stručne i precizne knjigovodstvene usluge za mala i srednja preduzeća. Pomažemo vam da se fokusirate na rast poslovanja dok mi brinemo o vašim finansijama.</p>
+    <a href="tel:+38267279415" class="about-btn">Kontaktirajte nas</a>
+  </div>
+</section>
+
+
+<section id="onama" class="about-section">
+  <div class="about-wrapper">
+
+    
+
+    <div class="about-content">
+      <h2>O nama</h2>
+      <p class="about-subtitle">Vaš partner u finansijskoj sigurnosti i rastu</p>
+
+      <p>
+        EM OFFICE je profesionalna računovodstvena agencija posvećena kvalitetu, tačnosti i punoj transparentnosti u poslovanju. 
+        Naš tim iskusnih finansijskih stručnjaka pruža pouzdanu podršku malim i srednjim preduzećima, 
+        dok vi gradite i razvijate svoj biznis.
+      </p>
+
+      <ul class="about-benefits">
+        <li><span>✔</span> Preciznost i zakonita poslovna podrška</li>
+        <li><span>✔</span> Poreska optimizacija i finansijsko savjetovanje</li>
+        <li><span>✔</span> Sigurnost, povjerljivost i profesionalizam</li>
+        <li><span>✔</span> Digitalna i moderna računovodstvena rješenja</li>
+      </ul>
+
+      <a href="tel:+38267279415" class="about-btn">Kontaktirajte nas</a>
+
+    </div>
+
+  </div>
+</section>
+
+
+
+<section id="kalkulator" class="taxcalc">
+  <div class="taxcalc-wrap">
+    <div class="taxcalc-head">
+      <h2>Kalkulator zarade (Crna Gora)</h2>
+      <p>Unesite bruto iznos i dobićete detaljan obračun.</p>
+    </div>
+
+    <form class="taxcalc-form" onsubmit="return false;">
+      <label for="gross">Bruto zarada (€)</label>
+      <div class="input-row">
+        <input id="gross" type="number" min="0" step="0.01" placeholder="npr. 1200" />
+        <button id="calcBtn" type="button">Izračunaj</button>
+      </div>
+      <small class="note">
+        *Obračun je informativan. Ne uključuje specifične olakšice, beneficije i sl.
+      </small>
+    </form>
+
+    <div class="taxcalc-results">
+      <div class="result-card">
+        <h3>Rezultat (zaposleni)</h3>
+        <div class="row"><span>Bruto</span><strong id="rGross">—</strong></div>
+        <div class="row"><span>Doprinosi (zaposleni)</span><strong id="rEmpContrib">—</strong></div>
+        <div class="row sub">
+          <span>• PIO 10%</span><strong id="rPIO">—</strong>
+        </div>
+        <div class="row sub">
+          <span>• Nezaposlenost 0.5%</span><strong id="rUnempEmp">—</strong>
+        </div>
+        <div class="row"><span>Porez na dohodak</span><strong id="rPIT">—</strong></div>
+        <div class="row total"><span>Neto zarada</span><strong id="rNet">—</strong></div>
+      </div>
+
+      <div class="result-card">
+        <h3>Trošak poslodavca</h3>
+        <div class="row"><span>Doprinosi (poslodavac)</span><strong id="rErContrib">—</strong></div>
+        <div class="row sub">
+          <span>• Nezaposlenost 0.5%</span><strong id="rUnempEr">—</strong>
+        </div>
+        <div class="row sub">
+          <span>• Fond rada 0.2%</span><strong id="rLabor">—</strong>
+        </div>
+        <div class="row sub">
+          <span>• Komorski 0.27%</span><strong id="rChamber">—</strong>
+        </div>
+        <div class="row total"><span>Ukupan trošak</span><strong id="rTotalCost">—</strong></div>
+      </div>
+    </div>
+
+    <div class="taxcalc-foot">
+      <button id="resetBtn" type="button" class="ghost">Reset</button>
+      <p class="legal">
+        Stope: PIT 0% ≤ 700€, 9% 701–1000€, 15% > 1000€; Doprinosi zaposlenog: PIO 10% + nezaposlenost 0.5%; 
+        Doprinosi poslodavca: nezaposlenost 0.5%, fond rada 0.2%, komora 0.27%.
+      </p>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+ <section id="usluge" class="services">
+  <h2 class="services-title">Naše usluge</h2>
+  <div class="service-cards">
+
+    <div class="card">
+      <img src="finansije.jpg" alt="Finansijsko knjigovodstvo">
+      <h3>Finansijsko knjigovodstvo</h3>
+      <button class="toggle-btn">Pogledaj više</button>
+      <p class="service-text">Vođenje glavne knjige, bilansa stanja i uspjeha, te priprema kompletnog finansijskog poslovanja vašeg preduzeća.</p>
+    </div>
+
+    <div class="card">
+      <img src="kalkulator.jpg" alt="Obračun zarada">
+      <h3>Obračun zarada</h3>
+      <button class="toggle-btn">Pogledaj više</button>
+      <p class="service-text">Mjesečni obračun plata, doprinosa i poreza — tačno i na vrijeme.</p>
+    </div>
+
+    <div class="card">
+      <img src="izvjestaj.jpg" alt="Godišnji finansijski izvještaj">
+      <h3>Godišnji finansijski izvještaj</h3>
+      <button class="toggle-btn">Pogledaj više</button>
+      <p class="service-text">Priprema i predaja godišnjih izvještaja prema zakonskim propisima.</p>
+    </div>
+
+    <div class="card">
+      <img src="analitika.jpg" alt="Analitika">
+      <h3>Analitika</h3>
+      <button class="toggle-btn">Pogledaj više</button>
+      <p class="service-text">Analiza troškova i prihoda radi donošenja boljih poslovnih odluka.</p>
+    </div>
+
+    <div class="card">
+      <img src="konsultacije.jpg" alt="Konsultacije">
+      <h3>Konsultacije</h3>
+      <button class="toggle-btn">Pogledaj više</button>
+      <p class="service-text">Stručno savjetovanje o računovodstvu i poreskim propisima.</p>
+    </div>
+
+    <div class="card">
+      <img src="poresko.jpg" alt="Poresko savetovanje">
+      <h3>Poresko savetovanje</h3>
+      <button class="toggle-btn">Pogledaj više</button>
+      <p class="service-text">Optimizacija poreskih obaveza i smanjenje rizika u skladu sa zakonom.</p>
+    </div>
+
+    <div class="card">
+      <img src="registracija.jpg" alt="Registracija preduzeća">
+      <h3>Registracija preduzeća i preduzetnika</h3>
+      <button class="toggle-btn">Pogledaj više</button>
+      <p class="service-text">Administrativna podrška prilikom registracije, promjena ili odjave firme.</p>
+    </div>
+
+    <div class="card">
+      <img src="revizija.jpg" alt="Knjigovodstvena kontrola i revizija">
+      <h3>Knjigovodstvena kontrola i revizija</h3>
+      <button class="toggle-btn">Pogledaj više</button>
+      <p class="service-text">Detaljna provjera tačnosti finansijskih evidencija i dokumentacije, uz savjete za unapređenje poslovanja i smanjenje rizika.</p>
+    </div>
+
+  </div>
+</section>
+
+
+<section id="faq" class="faq-section">
+  <h2 class="faq-title">Česta pitanja</h2>
+
+  <div class="faq-card">
+    <div class="faq-question">
+      <span>Da li radite sa novim firmama?</span>
+      <i class="arrow"></i>
+    </div>
+    <div class="faq-answer">
+      Da, sarađujemo sa novoosnovanim i razvijenim kompanijama i pružamo potpunu računovodstvenu podršku.
+    </div>
+  </div>
+
+  <div class="faq-card">
+    <div class="faq-question">
+      <span>Da li nudite konsultacije?</span>
+      <i class="arrow"></i>
+    </div>
+    <div class="faq-answer">
+      Da, nudimo profesionalne finansijske i poreske konsultacije.
+    </div>
+  </div>
+
+  <div class="faq-card">
+    <div class="faq-question">
+      <span>Kako da započnem saradnju?</span>
+      <i class="arrow"></i>
+    </div>
+    <div class="faq-answer">
+      Kontaktirajte nas i zakazaćemo sastanak — sve ostalo mi preuzimamo.
+    </div>
+  </div>
+</section>
+
+
+  <footer class="site-footer">
+  <!-- LOGO -->
+  <div class="footer-logo">
+    <img src="logo.png" alt="EM_OFFICE logo" class="footer-logo-img">
+  </div>
+
+  <!-- KONTAKT -->
+  <div class="footer-contact">
+    <div class="footer-contact-item">
+      <img src="lokacija.png" alt="Adresa" class="footer-icon">
+      <span>Ul. Mustafa Pecanin 101, Rožaje</span>
+    </div>
+    <div class="footer-contact-item">
+      <img src="telefon.png" alt="Telefon" class="footer-icon">
+      <span>067 279 415</span>
+    </div>
+    <div class="footer-contact-item">
+      <img src="insta (2).png" alt="Email" class="footer-icon">
+      <span><a href="mailto:emoffice@gmail.com">emoffice@gmail.com</a></span>
+    </div>
+    <div class="footer-contact-item">
+      <img src="insta (1).png" alt="Instagram" class="footer-icon">
+      <span><a href="https://www.instagram.com/EM_OFFICE" target="_blank">@EM_OFFICE</a></span>
+    </div>
+  </div>
+
+  <!-- COPYRIGHT -->
+  <p class="footer-copyright">
+    © 2025 EM_OFFICE Računovodstvo | Sva prava zadržana
+  </p>
+</footer>
+
+
+
+</body>
+</html>
